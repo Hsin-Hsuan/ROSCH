@@ -1502,6 +1502,7 @@ if (handle)
    * \throws InvalidNameException If the parameter key begins with a tilde, or is an otherwise invalid graph resource name
    */
   bool getParam(const std::string& key, int& i) const;
+  bool getParam(const std::string& key, float& f) const;
   /** \brief Get a boolean value from the parameter server.
    *
    * If you want to provide a default value in case the key does not exist use param().
@@ -1921,6 +1922,15 @@ if (handle)
 
     param_val = default_val;
   }
+
+  template<typename T>
+  T param(const std::string& param_name, const T& default_val) const
+  {
+      T param_val;
+      param(param_name, param_val, default_val);
+      return param_val;
+  }
+
 
   /**
    * \brief Shutdown every handle created through this NodeHandle.

@@ -1,0 +1,12 @@
+digraph Topics{
+2[label="/detection/lidar_detector/cluster_detect_visualization_01"];
+4[label="/lidar_euclidean_cluster_detect"];
+6[label="/ndt_matching"];
+7[label="/nmea2tfpose"];
+15[label="/voxel_grid_filter"];
+4->2 ;
+6->4 ;
+7->4 ;
+7->6 ;
+15->6 ;
+}

@@ -165,7 +165,8 @@ bool Analyzer::is_in_node_graph()
 
 bool Analyzer::is_target_node()
 {
-    return get_target_index() == graph_analyzer_->get_node_index(node_name_)
+    // return get_target_index() == graph_analyzer_->get_node_index(node_name_)
+    return graph_analyzer_->get_node_index(node_name_) != -1
                ? true
                : false;
 }

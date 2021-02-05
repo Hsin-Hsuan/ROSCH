@@ -1,0 +1,1 @@
+cmd_/home/nvidia/ROSCH/Measurer/RESCH/core/resch.ko := ld -EL -r  -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds --build-id  -o /home/nvidia/ROSCH/Measurer/RESCH/core/resch.ko /home/nvidia/ROSCH/Measurer/RESCH/core/resch.o /home/nvidia/ROSCH/Measurer/RESCH/core/resch.mod.o ;  true

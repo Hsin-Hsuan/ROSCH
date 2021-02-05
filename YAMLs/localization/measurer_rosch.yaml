@@ -1,0 +1,23 @@
+- nodename: /ndt_matching
+  core: 4
+  sub_topic:
+    - /filtered_points
+    - /gnss_pose
+  pub_topic:
+    - /estimate_twist
+    - /ndt_pose
+
+- nodename: /nmea2tfpose
+  core: 4
+  sub_topic:
+    - /nmea_sentence
+  pub_topic:
+    - /gnss_pose
+
+- nodename: /voxel_grid_filter
+  core: 4
+  sub_topic:
+    - /points_raw
+  pub_topic:
+    - /filtered_points
+

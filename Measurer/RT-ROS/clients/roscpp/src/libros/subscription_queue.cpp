@@ -203,15 +203,15 @@ CallbackInterface::CallResult SubscriptionQueue::call()
         {
           analyzer.finish_myself();
         }
-        ROS_INFO("target:%d %d[name:%s][topic:%s][%d] time:%f(min:%f  max:%f)\n",
-                 analyzer.get_target_index(),
-                 node_graph_analyzer.get_node_index(analyzer.get_node_name()),
-                 analyzer.get_node_name().c_str(),
-                 analyzer.get_topic_name().c_str(),
-                 analyzer.get_counter(),
-                 analyzer.get_exec_time_ms(),
-                 analyzer.get_min_time_ms(),
-                 analyzer.get_max_time_ms());
+        // ROS_INFO("target:%d %d[name:%s][topic:%s][%d] time:%f(min:%f  max:%f)\n",
+        //          analyzer.get_target_index(),
+        //          node_graph_analyzer.get_node_index(analyzer.get_node_name()),
+        //          analyzer.get_node_name().c_str(),
+        //          analyzer.get_topic_name().c_str(),
+        //          analyzer.get_counter(),
+        //          analyzer.get_exec_time_ms(),
+        //          analyzer.get_min_time_ms(),
+        //          analyzer.get_max_time_ms());
       }
       else
       {

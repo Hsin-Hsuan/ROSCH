@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace rosch;
-static const int PATH_MAX(128);
+// static const int PATH_MAX(128);
 
 NodeGraph::NodeGraph() : v_node_info_(0) {
   std::string self_path(get_selfpath());
@@ -19,7 +19,7 @@ NodeGraph::NodeGraph(const std::string &filename) : v_node_info_(0) {
 NodeGraph::~NodeGraph() {}
 
 std::string NodeGraph::get_selfpath() {
-  char buff[PATH_MAX];
+  char buff[128];
   ssize_t len = ::readlink("/proc/self/exe", buff, sizeof(buff) - 1);
   if (len != -1) {
     buff[len] = '\0';

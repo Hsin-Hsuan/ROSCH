@@ -40,6 +40,7 @@
 #include <boost/bind.hpp>
 
 #include <fcntl.h>
+#include <sys/uio.h>
 #if defined(__APPLE__)
   // For readv() and writev()
   #include <sys/types.h>

@@ -4,9 +4,9 @@
 #include <linux/wait.h>
 
 #include <linux/interrupt.h>
+#include <linux/irq.h>
 #include <linux/irqdesc.h>
 #include <linux/interrupt.h>
-#include <linux/irq.h>
 
 #include <resch-config.h>
 #include <resch-gpu-lock.h>

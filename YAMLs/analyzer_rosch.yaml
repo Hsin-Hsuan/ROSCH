@@ -1,0 +1,90 @@
+- nodename: /detection/lidar_detector/cluster_detect_visualization_01
+  core: 1
+  sub_topic:
+    - /clock
+    - /detection/lidar_detector/objects
+  pub_topic:
+    - /detection/lidar_detector/objects_markers
+    - /rosout
+  deadline: 0
+  period: 0
+  run_time: 0
+
+- nodename: /lidar_euclidean_cluster_detect
+  core: 1
+  sub_topic:
+    - /clock
+    - /points_raw
+    - /tf
+    - /tf_static
+  pub_topic:
+    - /cluster_centroids
+    - /detection/lidar_detector/cloud_clusters
+    - /detection/lidar_detector/objects
+    - /points_cluster
+    - /points_ground
+    - /points_lanes
+    - /rosout
+  deadline: 0
+  period: 0
+  run_time: 0
+
+- nodename: /ndt_matching
+  core: 1
+  sub_topic:
+    - /clock
+    - /config/ndt
+    - /filtered_points
+    - /gnss_pose
+    - /imu_raw
+    - /initialpose
+    - /points_map
+    - /vehicle/odom
+  pub_topic:
+    - /estimate_twist
+    - /estimated_vel
+    - /estimated_vel_kmph
+    - /estimated_vel_mps
+    - /localizer_pose
+    - /ndt_pose
+    - /ndt_reliability
+    - /ndt_stat
+    - /node_status
+    - /predict_pose
+    - /predict_pose_imu
+    - /predict_pose_imu_odom
+    - /predict_pose_odom
+    - /rosout
+    - /tf
+    - /time_ndt_matching
+  deadline: 0
+  period: 0
+  run_time: 0
+
+- nodename: /nmea2tfpose
+  core: 1
+  sub_topic:
+    - /clock
+    - /nmea_sentence
+  pub_topic:
+    - /gnss_pose
+    - /rosout
+    - /tf
+  deadline: 0
+  period: 0
+  run_time: 0
+
+- nodename: /voxel_grid_filter
+  core: 1
+  sub_topic:
+    - /clock
+    - /config/voxel_grid_filter
+    - /points_raw
+  pub_topic:
+    - /filtered_points
+    - /points_downsampler_info
+    - /rosout
+  deadline: 0
+  period: 0
+  run_time: 0
+
